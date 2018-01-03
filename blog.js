@@ -80,7 +80,11 @@ class Blog {
           }
         }
       );
-      res.send(contents2);
+      app.get('/preview2', function(req, res) {
+        res.sendFile(__dirname + '/edit_article.html');
+      });
+      res.redirect('preview2');
+//      res.send(contents2);
     });
     app.post('/createURL', function(req, res) {
       var url = req.body.link;
