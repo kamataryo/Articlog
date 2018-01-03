@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>home/write_article</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script src="loader.js" type="text/javascript"></script>
+    <script src="write_article.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <article id="write-article">
+      <form method="post" action="http://localhost:8080/createURL" name="fm" id="write-article-form">
+        <div id="inputs-buttons">
+          <span id="input-link-title">
+          パーマリンク<input type="text" name="link" id="link"><span id="link-display"></span><br>
+          　　タイトル<input type="text" name="title" id="title">
+          </span>
+          <span id="article-buttons">
+            <input type="button" class="square_btn" onClick="write_article.save_article();"    value="保存">
+            <input type="button" class="square_btn" id="preview-button" onClick="write_article.preview_article();" value="プレビュー">
+            <input type="button" class="square_btn" id="publish-button" onClick="write_article.written_article();" value="公開">
+          </span>
+        </div>
+        <input id="textarea2" name="textarea2" type="hidden"></input>
+        <textarea id="textarea" name="textarea"></textarea>
+      </form>
+    </article>
+  </body>
+</html>
