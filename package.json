@@ -1,5 +1,5 @@
 {
-  "name": "Articlog",
+  "name": "articlog",
   "version": "0.1.0",
   "description": "blog system",
   "main": "blog.js",
