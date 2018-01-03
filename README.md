@@ -1,7 +1,8 @@
-# blog
+# Articlog
 ブログシステムを作っていきます。  
   
-pug, markdown, htmlのファイルをサポートします。  
-
-WebGLなどのjavascriptでアニメーションするタグも埋め込むことが出来るようにしたいです。
-# Articlog
+pug, markdown, htmlのファイルをサポートする予定です。  
+  
+WebGLなどのjavascriptでアニメーションするタグも埋め込むことが出来ます。  
+  
+プラグイン機能もあるので拡張性は高くなると思います。
