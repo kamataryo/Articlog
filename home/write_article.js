@@ -4,14 +4,14 @@ let urlFlag = false;
 let publishFlag = false;
 class WriteArticle {
   constructor(text) {
-    ajax('blog/edit_article.html').then(this.onResolve, this.onRejected);
+    ajax('edit_article.html').then(this.onResolve, this.onRejected);
   }
   onResolve(response) {
     let textarea = document.getElementById('textarea');
     textarea.innerHTML = response;
     edit_text = response;
 
-    ajax('blog/url.txt').then(WriteArticle.onResolveURL, WriteArticle.onRejected);
+    ajax('url.txt').then(WriteArticle.onResolveURL, WriteArticle.onRejected);
 
     document.getElementById("textarea").addEventListener('keyup',function(){
       let preview_button = document.getElementById('preview-button');

@@ -16,7 +16,7 @@ class Home {
     article.style.visibility = 'visible';
     iframe.style.width = '0px';
     article.style.width = '100%';
-    ajax('blog/url.txt').then(onResolveArticleList, onRejected);
+    ajax('url.txt').then(onResolveArticleList, onRejected);
   }
   article_list(url_txt) {
     this.read_url_txt(url_txt);
@@ -63,7 +63,7 @@ class Home {
 };
 var home;
 
-home = new Home(ajax('blog/url.txt').then(onResolve, onRejected));
+home = new Home(ajax('url.txt').then(onResolve, onRejected));
 function onResolveWriteArticle(response) {
   home.write_article(response);
 }

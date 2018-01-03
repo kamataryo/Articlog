@@ -73,7 +73,7 @@ class Blog {
     app.post('/preview', function(req, res) {
       var contents = decodeURI(req.body.textarea2);
       var contents2 = contents.replace(/sssss/g, 'script' );
-      fs.writeFile('blog/edit_article.html', contents2,
+      fs.writeFile('edit_article.html', contents2,
         (error) => {
           if (error) {
             console.log(error);
@@ -111,8 +111,8 @@ class Blog {
           time += ('0' + nowTime.getSeconds()).slice(-2);
           var contents = decodeURI(name);
           var contents2 = contents.replace(/sssss/g, 'script' );
-          fs.appendFileSync('blog/html/' + time + '.html', contents2);
-          fs.appendFileSync('blog/url.txt', url + ' ' + time + '.html ' + title + '\n');
+          fs.appendFileSync('html/' + time + '.html', contents2);
+          fs.appendFileSync('url.txt', url + ' ' + time + '.html ' + title + '\n');
           res.sendFile(__dirname + '/html/' + time + '.html');
         } else {
           res.sendFile(__dirname + '/html/' + filename_array[fileIndex]);
@@ -123,7 +123,7 @@ class Blog {
     app.post('/home', function(req, res) {
       var contents = decodeURI(req.body.textarea2);
       var contents2 = contents.replace(/sssss/g, 'script' );
-      fs.writeFile('blog/edit_article.html', contents2,
+      fs.writeFile('edit_article.html', contents2,
         (error) => {
           if (error) {
             console.log(error);
@@ -177,10 +177,10 @@ class Blog {
     app.get('/article_list.js', function(req, res) {
       res.sendFile(__dirname + '/home/article_list.js');
     });
-    app.get('/blog/url.txt', function(req, res) {
+    app.get('/url.txt', function(req, res) {
       res.sendFile(__dirname + '/url.txt');
     });
-    app.get('/blog/edit_article.html', function(req, res) {
+    app.get('/edit_article.html', function(req, res) {
       res.sendFile(__dirname + '/edit_article.html');
     });
   }

@@ -1,6 +1,6 @@
 class ArticleList {
   constructor() {
-    ajax('blog/url.txt').then(this.onResolveArticleList, this.onRejected);
+    ajax('url.txt').then(this.onResolveArticleList, this.onRejected);
   }
   onResolveArticleList(url_txt) {
     let begin = 0;
